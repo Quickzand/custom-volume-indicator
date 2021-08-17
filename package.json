@@ -1,0 +1,14 @@
+{
+    "name": "custom-volume-indicator",
+    "version": "1.0.0",
+    "description": "A custom and less intrusive volume indicator for Macos",
+    "main": "main.js",
+    "author": "Matthew Sand",
+    "license": "MIT",
+    "scripts": {
+        "start": "electron ."
+    },
+    "devDependencies": {
+        "electron": "^13.1.9"
+    }
+}
