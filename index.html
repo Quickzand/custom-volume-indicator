@@ -3,17 +3,37 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
     <title>Volume Indicator</title>
+
+
+    <style>
+        body {
+            font-family: sans-serif;
+            font-size: 1.5em;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #volumeIndicator {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            background: rgba(255, 255, 255, 0.5);
+            z-index: 1;
+            transition: width 0.2s linear, transform 0.5s ease-out;
+        }
+    </style>
 </head>
 
 <body style="-webkit-app-region: drag">
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
+    <div id="volumeIndicator">
+
+    </div>
 </body>
+<script src="./renderer.js"></script>
 
 </html>

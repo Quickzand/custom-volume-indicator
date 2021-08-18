@@ -1,14 +1,29 @@
 {
-    "name": "custom-volume-indicator",
+    "name": "volume-indicator",
     "version": "1.0.0",
+    "productName": "Volume Indicator",
+
     "description": "A custom and less intrusive volume indicator for Macos",
     "main": "main.js",
     "author": "Matthew Sand",
     "license": "MIT",
     "scripts": {
-        "start": "electron ."
+        "start": "electron .",
+        "pack": "electron-builder --dir",
+        "dist": "electron-builder"
     },
     "devDependencies": {
-        "electron": "^13.1.9"
+        "electron": "^13.1.9",
+        "electron-packager": "^15.3.0",
+        "loudness": "^0.4.1"
+    },
+    "dependencies": {
+        "loudness": "^0.4.1"
+    },
+    "build": {
+        "appId": "com.electron.${volume-indicator}",
+        "mac": {
+            "category": "your.app.category.type"
+        }
     }
 }
